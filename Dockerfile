@@ -1,4 +1,5 @@
-FROM node:12
+FROM node:18.14.2-alpine3.17
+RUN apk --no-cache add curl
 # Install aws-cli
 RUN	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN	unzip awscliv2.zip && ./aws/install
